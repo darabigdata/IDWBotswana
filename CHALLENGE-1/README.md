@@ -3,7 +3,13 @@
 
 Machine Learning can be used to provide awesome applications and services. Examples are recommender systems on Netflix, Amazon and even Google reverse Image search. However, creating an application isn't limited to big tech firms. For this challenge you will build a web application of your choice. To help you get started we've provided a tutorial on how to build a machine learning movie recommendation application.
 
-### What's in the repo?
+#### What's in the repo?
+
+- Simple_Movie_Recommender.ipynb
+	*A jupyter notebook that implements simple machine learn to recommend movies based on a model trained on an input database*
+- Support for multiple sklearn SVM models
+- Visualization for models with more than 2 features
+
 
 ------
 
