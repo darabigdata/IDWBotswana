@@ -1,5 +1,37 @@
+# Challenge 2: Google Image Web-scraping and Classification
 
-# Google Image webscraping and Classification
+Machine Learning can be used to provide awesome applications and services. Examples are recommender systems on Netflix, Amazon and even Google reverse Image search. However, creating an application isn't limited to big tech firms. For this challenge you will build a web application of your choice. To help you get started we've provided a tutorial on how to build a machine learning movie recommendation application.
+
+### What's in the repo?
+
+* **Simple_Movie_Recommender.ipynb**
+    * *A jupyter notebook that implements simple machine learn to recommend movies based on a model trained on an input database*
+* **tmdb_5000_movies.csv**
+    * *An input database of 5000 movies [from Kaggle](https://www.kaggle.com/tmdb/tmdb-movie-metadata)*
+* **tmdb_movies_clean.csv**
+    * *An output cleaned database of movies*
+* **movie_indices.pkl**
+    * *An output pickle file of the machine learning model*
+* **app.py**
+    * *Code to make a simple Flask application*
+* **templates**
+    * *A directory of Flask HTML templates*
+* **Procfile**
+    * *A Heroku Procfile to turn the Flask app into a web application*
+* **requirements.txt**
+    * *A Heroku requirements file to turn the Flask app into a web application*
+
+### Dependencies
+
+* [matplotlib](https://matplotlib.org/)
+* [numpy](www.numpy.org/)
+* [scipy](https://www.scipy.org/)
+* [sklearn](scikit-learn.org/)
+* [sklearn-image](https://scikit-image.org/)
+
+------
+
+## Simple Web-scraping and Classification Tutorial
 
 This tutorial is a simpler version of https://www.pyimagesearch.com/2017/12/04/how-to-create-a-deep-learning-dataset-using-google-images/ and is divided into three parts:
 
