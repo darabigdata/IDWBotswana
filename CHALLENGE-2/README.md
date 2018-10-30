@@ -1,3 +1,6 @@
+<p align="center"><img width=30% src="https://github.com/darabigdata/IDWBotswana/blob/master/media/00000022.png"></p>
+
+
 # Challenge 2: Google Image Web-scraping and Classification
 
 In this challenge you will learn how to web-scrape images from Google and use them to train/test a Machine Leaning (ML) model. The aim is to come up with a image classification problem (cats vs dogs, people vs trees, Trump vs an orange cheeto etc), web-scrape the images and then use ML for the classification.
