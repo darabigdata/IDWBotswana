@@ -5,7 +5,7 @@ Machine Learning can be used to provide awesome applications and services. Examp
 
 ------
 
-This is simple tutorial, using the example provided in this repository on converting a Machine Learning (ML) project into a web application using Flask and deploying to the web on Heroku. For more extensive tutorials on Flask and Heroku please see:
+This is a simple tutorial, using the example provided in this repository on converting a Machine Learning (ML) project into a web application using Flask and deploying to the web on Heroku. For more extensive tutorials on Flask and Heroku please see:
 
 1. https://xcitech.github.io/tutorials/heroku_tutorial/
 2. https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
@@ -18,19 +18,19 @@ movie recommendations, based on a movie the user liked. The input will be a name
 
 ### Step 2. Build your model and save the important bits
 
-This is where you work on your ML project and optimise your models. In this example I have decided to make a simple Movie recommender using the [TMDB database from Kaggle](https://www.kaggle.com/tmdb/tmdb-movie-metadata), which is detailed in a [jupyter notebook](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-1/Simple_Movie_Recommender.ipynb).
+This is where you work on your ML project and optimise your models. In this example we'll make a simple movie recommender using the [TMDB database from Kaggle](https://www.kaggle.com/tmdb/tmdb-movie-metadata), which is detailed in the [jupyter notebook](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-1/Simple_Movie_Recommender.ipynb) in this repository.
 
-In most cases, you will not want to have the web application running the ML training and data preprocessing every time a user opens the  application (although in some cases you may, if the application uses data from the user). Doing the data pre-processing and ML heavy lifting off-line and exporting the model will make your application more efficient. From the ML script I exported two datasets:
+In most cases, you will not want to have the web application running the ML training and data pre-processing every time a user opens the  application (although in some cases you may, if the application uses data from the user). Doing the data pre-processing and ML heavy lifting off-line and exporting the model will make your application more efficient. The [example notebook](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-1/Simple_Movie_Recommender.ipynb) exports two datasets:
 
-1. A cleaned version of the dataset - 
-Here, only the columns I am interested in ('original_title', 'genres','popularity') were exported, but once I have cleaned the data.
+1. A cleaned version of the original dataset: 
+Here, only the columns we're interested in ('original_title', 'genres','popularity') are exported as a cleaned dataset.
 ```python
 #make new data frame
 movies_new_df = movies[['original_title', 'genres','popularity']]
 # save new file 
 movies_new_df.to_csv('tmb_movies_clean.csv', index=False)
 ```
-2. The ML model using pickle - recommender systems can either use content or collaborative filtering. COntent is the more simple version where it uses the genres and ratings/popularity. I did this using the unsupervised version of the k-nearest-neighbours, and the exported the model uing pickle:
+2. The ML model using pickle: recommender systems can either use content or collaborative filtering. Content is the more simple approach and here we're using genres and ratings/popularity. In this example the ML uses the unsupervised version of the k-nearest-neighbours algorithm, and the model itself is exported using pickle:
 ```python
 from sklearn.neighbors import NearestNeighbors
 #build the model
@@ -46,13 +46,14 @@ with open('movieindices.pkl', 'wb') as fid:
 ```
 
 ### Step 3. Create a virtual environment
+
 Before starting with Flask to build the web application, create and start a virtual environment (this is important for pushing the app to Heroku):
 
 ```bash
 >conda create -n env_flask python=3.6
 >source activate env_flask
 ```
-Then install Flask and other prerequisites. (You will need to install all modules you plan to use in your Flask app, here we need only pandasto additionally)
+Then install Flask and other prerequisites. (You will need to install all modules you plan to use in your Flask app, here we need only panda additionally)
 
 ```bash
 >pip install flask
@@ -60,9 +61,10 @@ Then install Flask and other prerequisites. (You will need to install all module
 >pip install panda
 ```
 ### Step 4. Build the Flask app
-The Flask app consists of 2 main components: the main 
+
+The Flask app consists of 2 main components: the main code 
 [app.py](https://github.com/hrampadarath/JBCA_Hack_Night_Dec/blob/master/web_app/app.py) and HTML templates, which are saved in a folder called 
-[templates](https://github.com/hrampadarath/JBCA_Hack_Night_Dec/tree/master/web_app/templates). A simple app.py contains code that returns a rendered version of the html files in the templates folder. For example:
+[templates](https://github.com/hrampadarath/JBCA_Hack_Night_Dec/tree/master/web_app/templates). A simple app.py returns a rendered version of the html files in the templates folder. For example:
 
 ```python
 from flask import Flask, request, render_template
