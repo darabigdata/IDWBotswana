@@ -3,23 +3,22 @@
 
 Machine Learning can be used to provide awesome applications and services. Examples are recommender systems on Netflix, Amazon and even Google reverse Image search. However, creating an application isn't limited to big tech firms. For this challenge you will build a web application of your choice. To help you get started we've provided a tutorial on how to build a machine learning movie recommendation application.
 
-A simple tutorial, using the example provided in this repository on converting a Machine Learnng project to a web application using Flask and deploying to the web on Heroku. For more extensive tutorials on Flask and Heroku please see:
+This is simple tutorial, using the example provided in this repository on converting a Machine Learning (ML) project into a web application using Flask and deploying to the web on Heroku. For more extensive tutorials on Flask and Heroku please see:
 
 1. https://xcitech.github.io/tutorials/heroku_tutorial/
 2. https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
 
 ### Step 1. Understand what you want to create
 
-This may seem as a silly step, but it is the most important. Having an idea on what you want to build will hlep ypu understand what 
-you will need from the Machine Leanrning part of the project. In this tutorial I want to make a simple web application to provide 
-movie recommendatiions, based on a movie the user liked. The input will be a name of the movie and the output recommendations for 
-that movie. For this to work I will need: (1) a database and (2) a model with the recommendations. 
+This may seem as a silly step, but it is the most important. Having an idea on what you want to build will help you understand what 
+you will need from the Machine Learning part of the project. In this tutorial we'll make a simple web application to provide 
+movie recommendations, based on a movie the user liked. The input will be a name of the movie and the output will be recommendations based on that movie. For this to work we'll need: (1) a database of movies; and (2) a machine learning model for the recommendations. 
 
 ### Step 2. Build your model and save the important bits
 
-This is where you work on your ML project and optimise your models. In this example I have decided to make a simple Movie recommender using the [TMDB database from Kaggle](https://www.kaggle.com/tmdb/tmdb-movie-metadata), which is detailed in a [jupyter notebook](https://github.com/hrampadarath/JBCA_Hack_Night_Dec/blob/master/web_app/Simple_Movie_Recommender.ipynb).
+This is where you work on your ML project and optimise your models. In this example I have decided to make a simple Movie recommender using the [TMDB database from Kaggle](https://www.kaggle.com/tmdb/tmdb-movie-metadata), which is detailed in a [jupyter notebook](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-1/Simple_Movie_Recommender.ipynb).
 
-In most cases, you will not want to have the webapplication doing the training and data preprocessing everytime a user opens the webapplication (in some cases you may, if the application uses data from the user). Doing the data preprocessing and ML heavy lifting offline and exporting the model will make your application more efficient. From the ML script I exported two datasets:
+In most cases, you will not want to have the web application running the ML training and data preprocessing every time a user opens the  application (although in some cases you may, if the application uses data from the user). Doing the data pre-processing and ML heavy lifting off-line and exporting the model will make your application more efficient. From the ML script I exported two datasets:
 
 1. A cleaned version of the dataset - 
 Here, only the columns I am interested in ('original_title', 'genres','popularity') were exported, but once I have cleaned the data.
