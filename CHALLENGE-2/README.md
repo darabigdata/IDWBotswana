@@ -65,10 +65,10 @@ var textToSave = urls.toArray().join('\n');
 var hiddenElement = document.createElement('a');
 hiddenElement.href = 'data:attachment/text,' + encodeURI(textToSave);
 hiddenElement.target = '_blank';
-hiddenElement.download = 'urls.txt';
+hiddenElement.download = 'zebra_urls.txt';
 hiddenElement.click();
 ```
-The last step will download 'urls.txt'
+The last step will download a text file named: 'zebra_urls.txt'.
 
 ### Step 2: Download all the images with Python
 
