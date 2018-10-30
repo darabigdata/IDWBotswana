@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="container" style="width:100%; height:60%">
+<h1>Movie Recommender App</h1>
+
+
+    <div>
+
+        <form action = "/similarByName" method = 'POST'>
+	    <p> <input name="name" type ="text" placeholder="Search by Name" />
+        <input type ="submit" value="submit" /> </p>
+        </form>
+
+
+    <span style="width:20%" >
+        <form action = '/random' method = 'Get'>
+	    <p> <input type ="submit" name = "submit" value="Random Movies" /> </p>
+        </form>
+    </span>
+
+    </div>
+
+</div>
+<div class="block2" style="width:100%", align="left">
+
+    <article>
+    <h3>Instructions:</h3>
+        <p style="font-family:Josefin Sans;"> To search for similar Movie based upon content:
+            <ol>
+            <li> Enter the name of an Movie in the "Search by Name" form. This will return a list of Movies
+                in the database with similar names.
+            </li>
+            <li> You can also generate a  Random Movie</li>
+            <li> For each Movie there will be an associated "Recommender" button. Use this
+                to generate similar Movie using a content based filtering.
+            </li>
+            </ol>
+
+             </p>
+    </article>
+
+</div>
+
+{% endblock %}
+
+

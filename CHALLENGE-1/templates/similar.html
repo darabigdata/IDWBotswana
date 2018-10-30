@@ -1,0 +1,24 @@
+
+{% extends "layout.html" %}
+{% block body %}
+
+  <body>
+  <h1> Similar Movies by {{ title }} to {{ name }}</h1>
+    {% for movie in topmovies %}
+    <div>
+
+         <form action = "/similarByContent" method = 'POST'>
+             <h2>{{ movie.name}}</h2>
+            <p><input name="name" type ="Hidden" value="{{ movie.name }}"/>
+                <b>Genre:</b> {{ movie.genre }}; <b>Ratings:</b> {{ movie.rating }}; <b>Type:</b> {{ movie.type }}
+             <input type ="submit" value="Recommend" style="padding: 8px 16px;"/>
+             </p>
+
+
+        </form>
+    </div>
+    {% endfor %}
+  </body>
+
+
+{% endblock %}
