@@ -16,11 +16,18 @@
 
 -----
 
-# CHALLENGE 1: Build a machine learning recommendation engine web application
+## CHALLENGE 1: Build a machine learning recommendation engine web application
 
-# CHALLENGE 2: Google image web-scraping and image-based machine learning classifier
+Machine Learning can be used to provide awesome applications and services. Examples are recommender systems on Netflix, Amazon and even Google reverse Image search. However, creating an application isn't limited to big tech firms. In this challenge you will build a web application of your choice.
 
-# CHALLENGE 3: Build a machine learning music classification system
+## CHALLENGE 2: Google image web-scraping and image-based machine learning classifier
+
+In this challenge you will learn how to web scrape images from Google and use them to train/test an image-based Machine Learning classifier. The aim is to come up with a image classification problem (cats vs dogs, people vs trees, Trump vs an orange cheeto etc), build your own database for training the algorithm by web-scraping the images and then to use machine learning for the classification.
+
+## CHALLENGE 3: Build a machine learning music classification system
+
+This project is all about using python to extract features from audio waveforms, and to then run machine learning algorithms to cluster and quantify music.
+
 
 -----
 
