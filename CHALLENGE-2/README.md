@@ -33,18 +33,19 @@ In this challenge you will learn how to web-scrape images from Google and use th
 
 ## Simple Web-scraping and Classification Tutorial
 
-This tutorial is a simpler version of https://www.pyimagesearch.com/2017/12/04/how-to-create-a-deep-learning-dataset-using-google-images/ and is divided into three parts:
+This tutorial is a simpler version of  and is divided into three parts:
 
 1. Obtaining a text file of the image urls that will make up the training and test datasets
 2. Using python to download and perfom simple checks on the images
 3. Use Scikit learn to perform image classification
 
 ### Step 1: Image Webscraping
-In this example I would like to find out if I can build a simple ML model to tell the difference between Images of Santa Claus vs Christmas images without Santa Claus. The first thing we will need to do is perfom webscraping using Google Chrome. 
 
-1. Open Chrome and navigate to google image search. Now enter your search, e.g Santa Claus
-2. Open the Developer console: either use CTRL+SHIFT+I or go to 'More tools', then 'Developer tools' 
-3. The next step is to start scrolling! Keep scrolling until you have found all relevant images to your query
+For this challenge you're going to need to build your own library of training data. For image data one of the best places to get this kind of data is Google Images. So in this tutorial we'll use Google Images to web-scrape a database of images. The instructions for this step are a simplified version of the excellent blog post [here](https://www.pyimagesearch.com/2017/12/04/how-to-create-a-deep-learning-dataset-using-google-images/). To follow this tutorial you'll need to use Google Chrome, but there are also many nice ways of scraping data from the web using the Python requests library and the BeautifulSoup library, e.g. [here](https://allofyourbases.com/2017/10/08/web-scraping-youtube-in-python/).
+
+1. Open Chrome and navigate to google image search. Now enter your search, e.g. "Zebra"
+2. Open the Developer console: either use CTRL+SHIFT+I or go to 'View' --> 'Developer' --> 'Javascript Console'. 
+3. The next step is to start scrolling! Keep scrolling until you have found all relevant images to your query.
 4. Next is to grab all the urls of the images in your scroll. In the console enter the following commands:
 
 ```javascript
@@ -69,11 +70,11 @@ hiddenElement.click();
 ```
 The last step will download 'urls.txt'
 
-### Step 2: Download the image with Python
+### Step 2: Download all the images with Python
 
-I have provided a [script](https://github.com/hrampadarath/JBCA_Hack_Night_Dec/blob/master/google_images_webscraping/download_images.py) to download the images. It is a Frankenstein of the codes from the [pyimager webpage](https://www.pyimagesearch.com/2017/12/04/how-to-create-a-deep-learning-dataset-using-google-images/) and my own that does not require opencv! You can write your oun or use the one provided.
+I have provided a [script](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-2/download_images.py) to download the images. It is a Frankenstein of the codes from the [pyimager webpage](https://www.pyimagesearch.com/2017/12/04/how-to-create-a-deep-learning-dataset-using-google-images/) and my own that does not require opencv! You can write your oWn or use the one provided.
 
 
 ### Step 3: Image classification with sklearn.
 
-An example [classifier](https://github.com/hrampadarath/JBCA_Hack_Night_Dec/blob/master/google_images_webscraping/Classifying_Santa_Clause_Images.ipynb) has been added to this repository that uses a combination of Gabor filters and Support Vector Machines (SVMs). 
+An example [classifier](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-2/Classifying_Zebra_Images.ipynb) has been added to this repository that uses a combination of Gabor filters and Support Vector Machines (SVMs). 
