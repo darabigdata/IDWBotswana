@@ -15,11 +15,21 @@ Machine Learning can be used to provide awesome applications and services. Examp
     * *An output pickle file of the machine learning model*
 * **app.py**
     * *Code to make a simple Flask application*
+* **templates**
+    * *A directory of Flask HTML templates*
 * **Procfile**
     * *A Heroku Procfile to turn the Flask app into a web application*
 * **requirements.txt**
     * *A Heroku requirements file to turn the Flask app into a web application*
 
+### Dependencies
+
+* pandas
+* json
+* sklearn
+* pickle
+* flask
+* random
 
 ------
 
