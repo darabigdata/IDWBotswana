@@ -23,7 +23,7 @@ This is where you work on your ML project and optimise your models. In this exam
 In most cases, you will not want to have the web application running the ML training and data pre-processing every time a user opens the  application (although in some cases you may, if the application uses data from the user). Doing the data pre-processing and ML heavy lifting off-line and exporting the model will make your application more efficient. The [example notebook](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-1/Simple_Movie_Recommender.ipynb) exports two datasets:
 
 1. A cleaned version of the original dataset: 
-Here, only the columns we're interested in ('original_title', 'genres','popularity') are exported as a cleaned dataset.
+here, only the columns we're interested in ('original_title', 'genres', 'popularity') are exported as a cleaned dataset.
 ```python
 #make new data frame
 movies_new_df = movies[['original_title', 'genres','popularity']]
@@ -62,9 +62,9 @@ Then install Flask and other prerequisites. (You will need to install all module
 ```
 ### Step 4. Build the Flask app
 
-The Flask app consists of 2 main components: the main code 
-[app.py](https://github.com/hrampadarath/JBCA_Hack_Night_Dec/blob/master/web_app/app.py) and HTML templates, which are saved in a folder called 
-[templates](https://github.com/hrampadarath/JBCA_Hack_Night_Dec/tree/master/web_app/templates). A simple app.py returns a rendered version of the html files in the templates folder. For example:
+The Flask app consists of 2 main components: (1) the main code 
+[app.py](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-1/app.py) and (2) the HTML templates, which are saved here in a folder called 
+[templates](https://github.com/darabigdata/IDWBotswana/tree/master/CHALLENGE-1/templates). A simple app.py returns a rendered version of the html files in the templates folder. For example:
 
 ```python
 from flask import Flask, request, render_template
@@ -101,28 +101,25 @@ The home.html file:
 ```
 The above html file has three important features:
 
-1. extends "layout.html" - the [layout.html](https://github.com/hrampadarath/JBCA_Hack_Night_Dec/blob/master/web_app/templates/layout.html) is a general html file that dictates the look of the application. All html files/pages in the applcation is an extention of this page.
-2. <form action = "/similarByName" method = 'POST'> here a form is used to create a query (i.e. name of movie), that makes a call to a function "/similarByName" in the [app.py](https://github.com/hrampadarath/JBCA_Hack_Night_Dec/blob/master/web_app/app.py). Once this quey is made, the function "/similarByName" searches the database for a movie with a smiliar name, and returns a dictionary. 
+1. extends "layout.html" - the [layout.html](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-1/templates/layout.html) is a general html file that dictates the look of the application. All the html files/pages in the application are an extention of this page.
+2. <form action = "/similarByName" method = 'POST'> here a form is used to create a query (i.e. name of movie), that makes a call to a function "/similarByName" in the [app.py](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-1/app.py). Once this query is made, the function "/similarByName" searches the database for a movie with a similiar name and returns a dictionary. 
 3. This is all wrapped in an html block that is passed to layout.html, creating the webpage. 
 
 The overall aim of this web app is that user will search for the movie in a form provided (a query that is sent to 
-"/similarByName" via  "similar.html") and for each item in the list there will be an associated recommend button (that sends a query to another 
-function /similarByContent also by  "similar.html"). The "/similarByContent" function is where the pickle file is used. 
-Confusing? Confuffled?
+"/similarByName" via  "similar.html") and for each item in the list there will be an associated recommend button (that sends a query to another function /similarByContent also by  "similar.html"). The "/similarByContent" function is where the pickle file is used. 
 
 To complete my app.py, I added a random movie generator, and an about page.
-
 
 **Note: while building your Flask app, you can test it by exectuting it via python. It will make a webpage at http://127.0.0.1:5000/**
 
 ### Step 5. Deploy to Heroku
 
-Will need a [Heroku](https://www.heroku.com/) account and the [HerokuCLI](https://devcenter.heroku.com/articles/heroku-cli). For our tutorial, we can use the free version of Heroku.
-Create the Procfile: A Procfile is a mechanism for declaring what commands are run by your application’s dynos on the Heroku platform. Create a file called “Procfile” and put the following in it:
+You will need a [Heroku](https://www.heroku.com/) account and the [HerokuCLI](https://devcenter.heroku.com/articles/heroku-cli). For this tutorial, we can use the free version of Heroku.
+Create the Procfile: A Procfile is a mechanism for declaring what commands are run by your application's dynos on the Heroku platform. Create a file called “Procfile” and put the following in it:
 
 	web: gunicorn app:app
 
-Create the python requirements file by running the following at the command prompt (within the virtual environment)
+Create the python requirements file by running the following at the command prompt (within the virtual environment):
 
  	pip freeze > requirements.txt
 
