@@ -146,6 +146,7 @@ To complete my app.py, I added a random movie generator, and an about page.
 ### Step 5. Deploy to Heroku
 
 You will need a [Heroku](https://www.heroku.com/) account and the [HerokuCLI](https://devcenter.heroku.com/articles/heroku-cli). For this tutorial, we can use the free version of Heroku.
+
 Create the Procfile: A Procfile is a mechanism for declaring what commands are run by your application's dynos on the Heroku platform. Create a file called “Procfile” and put the following in it:
 
 	web: gunicorn app:app
