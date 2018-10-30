@@ -4,7 +4,7 @@ We value the participation of all our attendees and want you all to have an enjo
 
 As such, the **DARA Big Data Hackathon** will be a harassment-free event for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, nationality, religion. We do not tolerate harassment of attendees in any form.
 
-* Presenters give their time freely, some are very distinguished, some are early career scientists, and all deserve a fair and encouraging hearing. Please try to be on time for the start of a session, or otherwise slip quietly into the room, refrain from loud conversations outside the doors and switch off mobile phones, and if you are using your computer try to do so quietly.
+* Presenters give their time freely, some are very distinguished, some are early career scientists, and all deserve a fair and encouraging hearing. Please try to be on time for the start of a session, or otherwise slip quietly into the room, refrain from loud conversations outside the doors and switch off mobile phones, and when you are using your computer try to do so quietly.
 * Harassment includes offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.
 * All communication given by lecturers, organisers and attendees should be appropriate for a professional audience including people of many different backgrounds. Sexual language, jokes and imagery are not appropriate for any event.
 * Be kind to others. Do not insult or put down other attendees.
