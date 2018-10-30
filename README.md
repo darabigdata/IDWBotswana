@@ -9,6 +9,8 @@
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 [![License](https://img.shields.io/cran/l/devtools.svg)](https://opensource.org/licenses/gpl-license)
 
+<p align="center"><img width=25% src="https://github.com/darabigdata/IDWBotswana/blob/master/media/daralogo.png"></p>
+
 # IDWBotswana
 DARA Big Data Hackathon @ University of Botswana
 
