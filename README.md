@@ -15,4 +15,4 @@ DARA Big Data Hackathon @ University of Botswana
 ## Basic Overview
 
 
-<p align="center"><img width=25% src="https://github.com/darabigdata/IDWBotswana/blob/master/media/Newton-Fund-Master-rgb.jpg"></p>
+<p align="center"><img width=25% src="https://github.com/darabigdata/IDWBotswana/blob/master/media/Newton-Fund-Master-rgb.jpg"><img width=25% src="https://github.com/darabigdata/IDWBotswana/blob/master/media/STFC_LOGO.png"><img width=25% src="https://github.com/darabigdata/IDWBotswana/blob/master/media/dst_logo_crop.jpeg"></p>
