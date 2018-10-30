@@ -30,6 +30,7 @@ Machine Learning can be used to provide awesome applications and services. Examp
 * pickle
 * flask
 * random
+* gunicorn
 
 ------
 
