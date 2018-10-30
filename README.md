@@ -14,6 +14,15 @@
 
 ## Introduction
 
+-----
+
+# CHALLENGE 1: Build a machine learning recommendation engine web application
+
+# CHALLENGE 2: Google image web-scraping and image-based machine learning classifier
+
+# CHALLENGE 3: Build a machine learning music classification system
+
+-----
 
 ### DARA Big Data is supported by:
 
