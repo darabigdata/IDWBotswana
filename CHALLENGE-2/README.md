@@ -1,4 +1,4 @@
-<p align="center"><img width=30% src="https://github.com/darabigdata/IDWBotswana/blob/master/media/00000022.png"></p>
+<p align="center"><img width=30% src="https://github.com/darabigdata/IDWBotswana/blob/master/media/00000022.jpg"></p>
 
 
 # Challenge 2: Google Image Web-scraping and Classification
