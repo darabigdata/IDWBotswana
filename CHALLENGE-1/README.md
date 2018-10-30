@@ -30,6 +30,7 @@ Machine Learning can be used to provide awesome applications and services. Examp
 * [json](https://docs.python.org/3/library/json.html)
 * [sklearn](scikit-learn.org/)
 * [pickle](https://docs.python.org/3/library/pickle.html)
+* [virtualenv](https://virtualenv.pypa.io/)
 * [flask](flask.pocoo.org/)
 * [random](https://docs.python.org/3/library/random.html)
 * [gunicorn](https://gunicorn.org/)
