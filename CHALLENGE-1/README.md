@@ -61,7 +61,7 @@ movies_new_df = movies[['original_title', 'genres','popularity']]
 # save new file 
 movies_new_df.to_csv('tmb_movies_clean.csv', index=False)
 ```
-2. The ML model using pickle: recommender systems can either use content or collaborative filtering. Content is the more simple approach and here we're using genres and ratings/popularity. In this example the ML uses the unsupervised version of the k-nearest-neighbours algorithm, and the model itself is exported using pickle:
+2. The ML model using pickle: recommender systems can either use content or collaborative filtering. Content is the more simple approach and here we're using genres and ratings/popularity. In this example the ML uses the unsupervised version of the [k-nearest-neighbours algorithm](https://www.analyticsvidhya.com/blog/2018/08/k-nearest-neighbor-introduction-regression-python/), and the model itself is exported using pickle:
 ```python
 from sklearn.neighbors import NearestNeighbors
 #build the model
