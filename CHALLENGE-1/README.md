@@ -80,11 +80,11 @@ with open('movieindices.pkl', 'wb') as fid:
 
 ### Step 3. Create a virtual environment
 
-Before starting with Flask to build the web application, create and start a virtual environment (this is important for pushing the app to Heroku):
+Before starting with Flask to build the web application, create and start a virtual environment (this is important for pushing the app to Heroku later):
 
 ```bash
->conda create -n env_flask python=3.6
->source activate env_flask
+> virtualenv -p python3 env_flask
+> source env_flask/bin/activate
 ```
 Then install Flask and other prerequisites. (You will need to install all modules you plan to use in your Flask app, here we need only panda additionally)
 
