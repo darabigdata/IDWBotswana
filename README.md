@@ -13,3 +13,6 @@
 DARA Big Data Hackathon @ University of Botswana
 
 ## Basic Overview
+
+
+<p align="left"><img width=25% src="https://github.com/darabigdata/IDWBotswana/blob/master/media/daralogo.png"></p><p align="right"><img width=25% src="https://github.com/darabigdata/IDWBotswana/blob/master/media/daralogo.png"></p>
