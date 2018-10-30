@@ -3,6 +3,8 @@
 
 Machine Learning can be used to provide awesome applications and services. Examples are recommender systems on Netflix, Amazon and even Google reverse Image search. However, creating an application isn't limited to big tech firms. For this challenge you will build a web application of your choice. To help you get started we've provided a tutorial on how to build a machine learning movie recommendation application.
 
+------
+
 This is simple tutorial, using the example provided in this repository on converting a Machine Learning (ML) project into a web application using Flask and deploying to the web on Heroku. For more extensive tutorials on Flask and Heroku please see:
 
 1. https://xcitech.github.io/tutorials/heroku_tutorial/
