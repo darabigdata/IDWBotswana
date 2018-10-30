@@ -5,10 +5,10 @@ Machine Learning can be used to provide awesome applications and services. Examp
 
 #### What's in the repo?
 
-- Simple_Movie_Recommender.ipynb
-	*A jupyter notebook that implements simple machine learn to recommend movies based on a model trained on an input database*
-- Support for multiple sklearn SVM models
-- Visualization for models with more than 2 features
+* Simple_Movie_Recommender.ipynb
+    *A jupyter notebook that implements simple machine learn to recommend movies based on a model trained on an input database*
+* Support for multiple sklearn SVM models
+* Visualization for models with more than 2 features
 
 
 ------
