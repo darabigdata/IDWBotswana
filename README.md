@@ -13,7 +13,9 @@
 
 
 ## Introduction
-As part of [International Data Week 2018](http://internationaldataweek.org) the [DARA Big Data project](https://www.darabigdata.com) is running a hackathon at the University of Botswana. The DARA Big Data hackathon is designed to help you improve your data science skills in a friendly and supportive environment. At the hackathon, each team will choose one of the DARA Big Data hack challenges to work on. At the end of the hack each team will give a 5 minute presentation. These presentations will be judged by the organisers and there will be a prize for the winning team. The presentations will be judged on the accuracy of the predicted results via machine learning and visualisation/presentation of the data/results.
+Welcome to the [DARA Big Data project](https://www.darabigdata.com) [International Data Week 2018](http://internationaldataweek.org) hackathon at the University of Botswana! 
+
+The DARA Big Data hackathon is designed to help you improve your data science skills in a friendly and supportive environment. At the hackathon, each team will choose one of the DARA Big Data hack challenges to work on. At the end of the hack each team will give a 5 minute presentation. These presentations will be judged by the organisers and there will be a prize for the winning team. The presentations will be judged on the accuracy of the predicted results via machine learning and visualisation/presentation of the data/results.
 
 The DARA Big Data hack challenges will be run in Python3 using the [IDIA Cloud](idia.ac.za/research-and-projects/african-research-cloud). Students should have a basic working knowledge of Python (including the scipy and numpy libraries) - but you do not have to be an expert to take part and enjoy yourself!
 
