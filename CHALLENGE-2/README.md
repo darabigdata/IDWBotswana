@@ -139,7 +139,10 @@ for image in images:
 		os.remove(image)		
 ```
 
+For classification we're also going to need a set of images that don't contain our target class, i.e. images that are NOT of zebras. A good online database for random images is the [UKBench Dataset](https://archive.org/details/ukbench), it contains 10,000 images. You can build a "not zebra" dataset by randomly sampling images from there. Remember to randomly sample approximately the same number of "not zebra" images as "zebra" images, otherwise you'll end up with a [class imbalance problem](https://towardsdatascience.com/dealing-with-imbalanced-classes-in-machine-learning-d43d6fa19d2). 
 
 ### Step 3: Image classification with sklearn.
 
-An example [classifier](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-2/Classifying_Zebra_Images.ipynb) has been added to this repository that uses a combination of Gabor filters and Support Vector Machines (SVMs). 
+There are many different approaches to image classification. One heavily used method is Convolutional Neural Networks (CNNs) and there's a good example of how to implement a CNN using the keras library in this blog.
+
+In this repo we've provided an example [classifier](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-2/Classifying_Zebra_Images.ipynb) that uses a combination of Gabor filters and Support Vector Machines (SVMs). 
