@@ -179,3 +179,7 @@ Your app should be live
     or https://YOURAPP.herokuapp.com/
     
 You can view the final web-app from this tutorial at https://movie-recommender-example.herokuapp.com/    
+
+-----
+
+This tutorial is based on a [JBCA hack challenge](https://github.com/hrampadarath/JBCA_Hack_Night_Dec/tree/master/web_app).
