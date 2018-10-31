@@ -152,7 +152,7 @@ The purpose of the Gabor filter is to extract machine learning **features**
 
 ```python
 # first we will define a function that will use Gabor filters to reduce the images to a constant set of features
-#define Gabor features
+# define Gabor features
 def compute_feats(image, kernels):
     feats = np.zeros((len(kernels), 2), dtype=np.double)
     for k, kernel in enumerate(kernels):
@@ -164,3 +164,80 @@ def compute_feats(image, kernels):
     return feats
 ```
 
+```python
+# prepare Gabor filter bank kernels
+kernels = []
+for sigma in (1,4):
+    theta = np.pi
+    for frequency in (0.05, 0.25):
+        print('theta = {}, sigma = {} frequency = {}'.format(theta, sigma, frequency) )
+        kernel = np.real(gabor_kernel(frequency,theta=theta,sigma_x=sigma, sigma_y=sigma))
+        kernels.append(kernel)
+                         
+np.shape(kernels)
+```
+
+```python
+zebra_feats = np.zeros((len(zebra_images),9))
+for i, image in enumerate(zebra_images):
+    im = plt.imread(image,format='jpeg')
+    if len(im.shape) > 2:
+        imean = im.mean(axis=2)
+    else:
+        imean = im
+    imfeats = compute_feats(imean,kernels).reshape(-1)
+    zebra_feats[i,:-1] = imfeats 
+    zebra_feats[i,-1] = 1
+```
+
+```python
+nozebra_feats = np.zeros((len(nozebra_images),9))
+for i, image in enumerate(nozebra_images):
+    im = plt.imread(image,format='jpeg')
+    imfeats = compute_feats(im.mean(axis=2),kernels).reshape(-1)
+    nozebra_feats[i,:-1] = imfeats 
+    nozebra_feats[i,-1] = 0
+```
+
+```python
+#combine the datasets
+ds = np.concatenate((nosanta_feats,santa_feats), axis=0)
+features = ds[:,:-1]
+```
+
+```python
+features = MaxAbsScaler().fit_transform(features)
+```
+
+```python
+target = ds[:,-1]
+```
+
+```python
+x_train, x_test, y_train, y_test = train_test_split(features,target)
+
+print('Training data and target sizes: \n{}, {}'.format(x_train.shape,y_train.shape))
+print('Test data and target sizes: \n{}, {}'.format(x_test.shape,y_test.shape))
+```
+
+```python
+# Create a classifier: a support vector classifier
+classifier = svm.SVC(C=1,kernel='rbf',gamma=1)
+
+# fit to the training data
+classifier.fit(x_train,y_train)
+```
+
+```python
+# now predict the value of the digit on the test data
+y_pred = classifier.predict(x_test)
+```
+
+```python
+print("Confusion matrix:\n%s" % metrics.confusion_matrix(y_test, y_pred))
+```
+
+```python
+print("Classification report for classifier %s:\n%s\n"
+      % (classifier, metrics.classification_report(y_test, y_pred)))
+```
