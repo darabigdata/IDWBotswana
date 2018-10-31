@@ -1,7 +1,7 @@
 
 <p align="center"><img width=40% src="https://github.com/darabigdata/IDWBotswana/blob/master/media/music_notes.jpg"></p>
 
-# Challenge 3: Build a machine learning music classification engine
+# Challenge 3: Build a machine learning music classification system
 
 Machine Learning can be used to provide awesome applications and services. Examples are recommender systems on Netflix, Amazon and even Google reverse Image search. However, creating an application isn't limited to big tech firms. For this challenge you will build a web application of your choice. To help you get started we've provided a tutorial on how to build a machine learning movie recommendation application.
 
