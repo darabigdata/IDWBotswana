@@ -35,10 +35,10 @@ This project is all about using python to extract features from audio waveforms,
 
 -----
 
-# Not at the hackathon, but want to test your code-building skills? Feel free!
+### Not at the hackathon, but want to test your code-building skills? Feel free!
 
 ```bash
-> git clone 
+> git clone https://github.com/darabigdata/IDWBotswana.git
 ```
 
 Then make sure you have the right Python libraries for the tutorials. They can all be installed using pip and the requirements.txt file in the repo:
