@@ -266,3 +266,8 @@ There are also the standard error metrics:
 print("Classification report for classifier %s:\n%s\n"
       % (classifier, metrics.classification_report(y_test, y_pred)))
 ```
+
+
+-----
+
+This tutorial is based on a [JBCA hack challenge](https://github.com/hrampadarath/JBCA_Hack_Night_Dec/tree/master/google_images_webscraping)
