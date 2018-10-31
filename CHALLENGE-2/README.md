@@ -144,11 +144,11 @@ For classification we're also going to need a set of images that don't contain o
 
 ### Step 3: Image classification with sklearn.
 
-There are many different approaches to image classification. One heavily used method is Convolutional Neural Networks (CNNs) and there's a good example of how to implement a CNN using the [keras library](https://keras.io/) in this blog.
+There are many different approaches to image classification. One heavily used method is Convolutional Neural Networks (CNNs) and there's a good example of how to implement a CNN using the [keras library](https://keras.io/) in [this blog](https://www.pyimagesearch.com/2017/12/11/image-classification-with-keras-and-deep-learning/).
 
 In this repo we've provided an example [classifier](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-2/Classifying_Zebra_Images.ipynb) that uses a combination of [Gabor filters](http://scikit-image.org/docs/dev/auto_examples/features_detection/plot_gabor.html) and [Support Vector Machines (SVMs)](https://medium.com/machine-learning-101/chapter-2-svm-support-vector-machine-theory-f0812effc72). 
 
-The purpose of the Gabor filter is to extract machine learning **features** 
+The purpose of the Gabor filter is to extract machine learning **features** on multiple scales from an image. By doing this it compresses the information in each image down to a small set of numbers. First we need to define the type of Gabor filters we want to use:
 
 ```python
 # first we will define a function that will use Gabor filters to reduce the images to a constant set of features
@@ -164,6 +164,8 @@ def compute_feats(image, kernels):
     return feats
 ```
 
+and then we need to define the number of **scales** we want to filter on|:
+
 ```python
 # prepare Gabor filter bank kernels
 kernels = []
@@ -176,6 +178,8 @@ for sigma in (1,4):
                          
 np.shape(kernels)
 ```
+
+Once we've done that we can apply the filters to our "zebra" images. We are using **2 filters** on **4 scales**, so we will get an output of **8 features** for each image.
 
 ```python
 zebra_feats = np.zeros((len(zebra_images),9))
@@ -190,6 +194,8 @@ for i, image in enumerate(zebra_images):
     zebra_feats[i,-1] = 1
 ```
 
+We now need to do the same for our "not zebra" images:
+
 ```python
 nozebra_feats = np.zeros((len(nozebra_images),9))
 for i, image in enumerate(nozebra_images):
@@ -199,19 +205,27 @@ for i, image in enumerate(nozebra_images):
     nozebra_feats[i,-1] = 0
 ```
 
+We'll combine all of these features into a single dataset:
+
 ```python
 #combine the datasets
-ds = np.concatenate((nosanta_feats,santa_feats), axis=0)
+ds = np.concatenate((nozebra_feats,zebra_feats), axis=0)
 features = ds[:,:-1]
 ```
+
+and then we need to normalise the feature values to lie between 0 and 1. We can do this using a library routine from the scikit-learn library:
 
 ```python
 features = MaxAbsScaler().fit_transform(features)
 ```
 
+We need to tell our machine learning classifier which column in the dataset corresponds to the target class, i.e. "zebra" or "not zebra":
+
 ```python
 target = ds[:,-1]
 ```
+
+and then we can split the full dataset into a training data set, to train our classifier, and a test dataset to test our classifer:
 
 ```python
 x_train, x_test, y_train, y_test = train_test_split(features,target)
@@ -220,22 +234,32 @@ print('Training data and target sizes: \n{}, {}'.format(x_train.shape,y_train.sh
 print('Test data and target sizes: \n{}, {}'.format(x_test.shape,y_test.shape))
 ```
 
+Now we have to choose a classifer. For this example we're going to use a [Support Vector Machine (SVM) from the scikit-learn library](http://scikit-learn.org/stable/modules/svm.html). There are various options for how to implement support vector machines in scikit-learn; here we're using the Support Vector Classifier (SVC) and you can find a description of the parameters [here](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC). 
+
+To use it all we have to do is (1) call the algorithm, and (2) tell it to fit a machine learning model using our training data:
+
 ```python
-# Create a classifier: a support vector classifier
-classifier = svm.SVC(C=1,kernel='rbf',gamma=1)
+# Create a classifier: a support vector machine classifier
+classifier = svm.SVC(C=1, kernel='rbf', gamma=1)
 
 # fit to the training data
 classifier.fit(x_train,y_train)
 ```
+
+Once we've trained the machine learning model we can test how well it works using our test data:
 
 ```python
 # now predict the value of the digit on the test data
 y_pred = classifier.predict(x_test)
 ```
 
+To assess how well it performed there are a range of methods. A simple way to view the results is the [confusion matrix](https://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/):
+
 ```python
 print("Confusion matrix:\n%s" % metrics.confusion_matrix(y_test, y_pred))
 ```
+
+There are also the standard error metrics:
 
 ```python
 print("Classification report for classifier %s:\n%s\n"
