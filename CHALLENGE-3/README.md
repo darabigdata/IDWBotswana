@@ -9,20 +9,6 @@ Machine Learning can be used to provide awesome applications and services. Examp
 
 * **Music_Classifier.ipynb**
     * *A jupyter notebook that implements simple machine learning to classify music*
-* **tmdb_5000_movies.csv**
-    * *An input database of 5000 movies [from Kaggle](https://www.kaggle.com/tmdb/tmdb-movie-metadata)*
-* **tmdb_movies_clean.csv**
-    * *An output cleaned database of movies*
-* **movie_indices.pkl**
-    * *An output pickle file of the machine learning model*
-* **app.py**
-    * *Code to make a simple Flask application*
-* **templates**
-    * *A directory of Flask HTML templates*
-* **Procfile**
-    * *A Heroku Procfile to turn the Flask app into a web application*
-* **requirements.txt**
-    * *A Heroku requirements file to turn the Flask app into a web application*
 
 ### Dependencies
 
@@ -40,16 +26,11 @@ Machine Learning can be used to provide awesome applications and services. Examp
 
 ## Simple Music Classification
 
-This is a simple tutorial, using the example provided in this repository on converting a Machine Learning (ML) project into a web application using Flask and deploying to the web on Heroku. For more extensive tutorials on Flask and Heroku please see:
+### Step 1. Extract machine learning features from music
 
-1. https://xcitech.github.io/tutorials/heroku_tutorial/
-2. https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+### Step 2. Prepare your data
 
-### Step 1. Understand what you want to create
-
-This may seem as a silly step, but it is the most important. Having an idea on what you want to build will help you understand what 
-you will need from the Machine Learning part of the project. In this tutorial we'll make a simple web application to provide 
-movie recommendations, based on a movie the user liked. The input will be a name of the movie and the output will be recommendations based on that movie. For this to work we'll need: (1) a database of movies; and (2) a machine learning model for the recommendations. 
+### Step 3. Run some machine learning
 
 
 -----
