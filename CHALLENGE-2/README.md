@@ -75,7 +75,15 @@ The last step will download a text file named: 'zebra_urls.txt'.
 
 ### Step 2: Download all the images with Python
 
-I have provided a [script](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-2/download_images.py) to download the images. It is a Frankenstein of the codes from the [pyimager webpage](https://www.pyimagesearch.com/2017/12/04/how-to-create-a-deep-learning-dataset-using-google-images/) and my own that does not require opencv! You can write your oWn or use the one provided.
+This repo includes a [script](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-2/download_images.py) to download all the images listed in the url file. You can also always write your own!
+
+The script provided here takes two arguments: (1) the url list file, and (2) the location of the directory where you want the images to be stored. You can run it like this:
+
+```bash
+python download_images.py -u zebra_urls.txt -o ./ZEBRA/
+```
+
+In side the script, the steps are firstly to grab all the urls from the input file:
 
 ```python
 # grab the list of URLs from the input file, then initialize the
@@ -83,6 +91,8 @@ I have provided a [script](https://github.com/darabigdata/IDWBotswana/blob/maste
 rows = open(args["urls"]).read().strip().split("\n")
 total = 0
 ```
+
+then to loop through each of the urls and download each one into the specified output folder:
 
 ```python
 # loop the URLs and download the images
@@ -108,6 +118,8 @@ for url in rows:
 
 ```
 
+Once you've got all of the images you probably want to check to see if any have been corrupted or aren't really images. So there's a check at the end that tries to open each image. If the check fails (i.e. the image can't be opened) then the image file is deleted:
+
 ```python
 # open the images, if it returns an error delete the image.
 images = glob.glob('{}/*.jpg'.format(args["output"]))
@@ -126,6 +138,7 @@ for image in images:
 		print('INFO deleting {}'.format(image))
 		os.remove(image)		
 ```
+
 
 ### Step 3: Image classification with sklearn.
 
