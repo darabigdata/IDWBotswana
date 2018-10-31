@@ -77,6 +77,55 @@ The last step will download a text file named: 'zebra_urls.txt'.
 
 I have provided a [script](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-2/download_images.py) to download the images. It is a Frankenstein of the codes from the [pyimager webpage](https://www.pyimagesearch.com/2017/12/04/how-to-create-a-deep-learning-dataset-using-google-images/) and my own that does not require opencv! You can write your oWn or use the one provided.
 
+```python
+# grab the list of URLs from the input file, then initialize the
+# total number of images downloaded thus far
+rows = open(args["urls"]).read().strip().split("\n")
+total = 0
+```
+
+```python
+# loop the URLs and download the images
+for url in rows:
+	try:
+		# try to download the image
+		r = requests.get(url, timeout=60)
+ 
+		# save the image to disk
+		p = os.path.sep.join([args["output"], "{}.jpg".format(
+			str(total).zfill(8))])
+		f = open(p, "wb")
+		f.write(r.content)
+		f.close()
+ 
+		# update the counter
+		print("[INFO] downloaded: {}".format(p))
+		total += 1
+ 
+	# handle if any exceptions are thrown during the download process
+	except:
+		print("[INFO] error downloading {}...skipping".format(p))
+
+```
+
+```python
+# open the images, if it returns an error delete the image.
+images = glob.glob('{}/*.jpg'.format(args["output"]))
+
+for image in images:
+	delete = False
+	try:
+		im = plt.imread(image,format='jpeg')
+		if im is None:
+			delete = True
+	except:
+		print('Except')
+		delete = True
+
+	if delete:
+		print('INFO deleting {}'.format(image))
+		os.remove(image)		
+```
 
 ### Step 3: Image classification with sklearn.
 
