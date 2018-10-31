@@ -15,9 +15,9 @@ In this challenge you will learn how to web-scrape images from Google and use th
     * *Code to download images from a list of urls*
 * **get_random_images.py**
     * *Code to randomly select pictures from the [UKBench Dataset](https://archive.org/details/ukbench)*
-* **ZEBRA/**
+* **zebra**
     * *A directory of ~400 pictures that contain zebras*
-* **NOZEBRA/**
+* **nozebra**
     * *A directory of ~400 pictures that don't contain zebras*
 
 ### Dependencies
