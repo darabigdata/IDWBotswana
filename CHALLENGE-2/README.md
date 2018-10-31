@@ -147,3 +147,20 @@ For classification we're also going to need a set of images that don't contain o
 There are many different approaches to image classification. One heavily used method is Convolutional Neural Networks (CNNs) and there's a good example of how to implement a CNN using the [keras library](https://keras.io/) in this blog.
 
 In this repo we've provided an example [classifier](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-2/Classifying_Zebra_Images.ipynb) that uses a combination of Gabor filters and Support Vector Machines (SVMs). 
+
+The purpose of the Gabor filter is to extract machine learning **features** 
+
+```python
+# first we will define a function that will use Gabor filters to reduce the images to a constant set of features
+#define Gabor features
+def compute_feats(image, kernels):
+    feats = np.zeros((len(kernels), 2), dtype=np.double)
+    for k, kernel in enumerate(kernels):
+        filtered = ndi.convolve(image, kernel, mode='wrap')
+        #feats[k, 0] = filtered.mean()
+        #feats[k, 1] = filtered.var()
+        feats[k, 0] = kurtosis(np.reshape(filtered,-1))
+        feats[k, 1] = skew(np.reshape(filtered,-1))
+    return feats
+```
+
