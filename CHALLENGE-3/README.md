@@ -11,7 +11,11 @@ Machine Learning can be used to provide awesome applications and services. Examp
     * *A jupyter notebook that uses the librosa library to extract machine learning features from audio files*
 * **Music_Classifier.ipynb**
     * *A jupyter notebook that implements simple machine learning to classify music*
-
+* **data_5band**
+    * *A folder containing files with machine learning features for different artists/bands*
+* **data_5and25band**
+    * *A folder containing files with machine learning features for different artists/bands*
+    
 ### Dependencies
 
 * [librosa](https://librosa.github.io/librosa/)
