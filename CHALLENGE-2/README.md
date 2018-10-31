@@ -144,7 +144,7 @@ For classification we're also going to need a set of images that don't contain o
 
 ### Step 3: Image classification with sklearn.
 
-There are many different approaches to image classification. One heavily used method is Convolutional Neural Networks (CNNs) and there's a good example of how to implement a CNN using the [keras library](https://keras.io/) in [this blog](https://www.pyimagesearch.com/2017/12/11/image-classification-with-keras-and-deep-learning/).
+There are many different approaches to image classification. One heavily used method is Convolutional Neural Networks (CNNs) and there's a good example of how to implement a CNN using the [keras library](https://keras.io/) in [this blog](https://www.pyimagesearch.com/2017/12/11/image-classification-with-keras-and-deep-learning/) and [this blog](https://www.pyimagesearch.com/2018/04/16/keras-and-convolutional-neural-networks-cnns/).
 
 In this repo we've provided an example [classifier](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-2/Classifying_Zebra_Images.ipynb) that uses a combination of [Gabor filters](http://scikit-image.org/docs/dev/auto_examples/features_detection/plot_gabor.html) and [Support Vector Machines (SVMs)](https://medium.com/machine-learning-101/chapter-2-svm-support-vector-machine-theory-f0812effc72). 
 
