@@ -160,7 +160,7 @@ def compute_feats(image, kernels):
     return feats
 ```
 
-and then we need to define the number of **scales** we want to filter on|:
+and then we need to define the number of **scales** we want to filter on:
 
 ```python
 # prepare Gabor filter bank kernels
