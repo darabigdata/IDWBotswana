@@ -80,10 +80,10 @@ This repo includes a [script](https://github.com/darabigdata/IDWBotswana/blob/ma
 The script provided here takes two arguments: (1) the url list file, and (2) the location of the directory where you want the images to be stored. You can run it like this:
 
 ```bash
-python download_images.py -u zebra_urls.txt -o ./ZEBRA/
+> python download_images.py -u zebra_urls.txt -o ./ZEBRA/
 ```
 
-In side the script, the steps are firstly to grab all the urls from the input file:
+Inside the script, the first step is to grab a list of the urls from the input file:
 
 ```python
 # grab the list of URLs from the input file, then initialize the
