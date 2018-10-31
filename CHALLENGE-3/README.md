@@ -7,6 +7,8 @@ Machine Learning can be used to provide awesome applications and services. Examp
 
 ### What's in the repo?
 
+* **Extract_Features.ipynb**
+    * *A jupyter notebook that uses the librosa library to extract machine learning features from audio files*
 * **Music_Classifier.ipynb**
     * *A jupyter notebook that implements simple machine learning to classify music*
 
