@@ -31,6 +31,7 @@ In this challenge you will learn how to web-scrape images from Google and use th
 * [scipy](https://www.scipy.org/)
 * [sklearn](scikit-learn.org/)
 * [sklearn-image](https://scikit-image.org/)
+* [requests](docs.python-requests.org/en/master/)
 
 ------
 
@@ -143,6 +144,6 @@ For classification we're also going to need a set of images that don't contain o
 
 ### Step 3: Image classification with sklearn.
 
-There are many different approaches to image classification. One heavily used method is Convolutional Neural Networks (CNNs) and there's a good example of how to implement a CNN using the keras library in this blog.
+There are many different approaches to image classification. One heavily used method is Convolutional Neural Networks (CNNs) and there's a good example of how to implement a CNN using the [keras library](https://keras.io/) in this blog.
 
 In this repo we've provided an example [classifier](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-2/Classifying_Zebra_Images.ipynb) that uses a combination of Gabor filters and Support Vector Machines (SVMs). 
