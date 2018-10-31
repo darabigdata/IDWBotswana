@@ -33,6 +33,20 @@ In this challenge you will learn how to web scrape images from Google and use th
 
 This project is all about using python to extract features from audio waveforms, and to then run machine learning algorithms to cluster and quantify music.
 
+-----
+
+# Not at the hackathon, but want to test your code-building skills? Feel free!
+
+```bash
+> git clone 
+```
+
+Then make sure you have the right Python libraries for the tutorials. They can all be installed using pip and the requirements.txt file in the repo:
+
+```bash
+> pip install -r requirements.txt
+```
+
 
 -----
 
