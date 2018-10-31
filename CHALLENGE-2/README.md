@@ -225,7 +225,12 @@ We need to tell our machine learning classifier which column in the dataset corr
 target = ds[:,-1]
 ```
 
-and then we can split the full dataset into a training data set, to train our classifier, and a test dataset to test our classifer:
+and then we can split the full dataset into:
+
+* a training data set (to train our classifier), and 
+* a test dataset (to test our classifer).
+
+If we wanted, we could also add in a *validation* dataset to test for over-fitting... we won't do that in this simple example, but you might want to think about it for your own classifier.
 
 ```python
 x_train, x_test, y_train, y_test = train_test_split(features,target)
