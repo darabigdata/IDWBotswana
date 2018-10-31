@@ -13,7 +13,7 @@
 
 
 ## Introduction
-<img src="https://github.com/darabigdata/IDWBotswana/blob/master/media/Animated-Flag-Botswana.gif" width=5%> Welcome to the [DARA Big Data](https://www.darabigdata.com) project [International Data Week 2018](http://internationaldataweek.org) hackathon at the University of Botswana! <img src="https://github.com/darabigdata/IDWBotswana/blob/master/media/Animated-Flag-Botswana.gif" width=5%>
+<img src="https://github.com/darabigdata/IDWBotswana/blob/master/media/Animated-Flag-Botswana.gif" width=5%> Welcome to the [DARA Big Data](https://www.darabigdata.com) [International Data Week 2018](http://internationaldataweek.org) hackathon at the University of Botswana! <img src="https://github.com/darabigdata/IDWBotswana/blob/master/media/Animated-Flag-Botswana.gif" width=5%>
 
 The DARA Big Data hackathon is designed to help you improve your data science skills in a friendly and supportive environment. At the hackathon, each team will choose one of the DARA Big Data hack challenges to work on. At the end of the hack each team will give a 5 minute presentation. These presentations will be judged by the organisers and there will be a prize for the winning team. The presentations will be judged on the accuracy of the predicted results via machine learning and visualisation/presentation of the data/results.
 
