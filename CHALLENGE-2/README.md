@@ -7,22 +7,18 @@ In this challenge you will learn how to web-scrape images from Google and use th
 
 ### What's in the repo?
 
-* **Simple_Movie_Recommender.ipynb**
-    * *A jupyter notebook that implements simple machine learn to recommend movies based on a model trained on an input database*
-* **tmdb_5000_movies.csv**
-    * *An input database of 5000 movies [from Kaggle](https://www.kaggle.com/tmdb/tmdb-movie-metadata)*
-* **tmdb_movies_clean.csv**
-    * *An output cleaned database of movies*
-* **movie_indices.pkl**
-    * *An output pickle file of the machine learning model*
-* **app.py**
-    * *Code to make a simple Flask application*
-* **templates**
-    * *A directory of Flask HTML templates*
-* **Procfile**
-    * *A Heroku Procfile to turn the Flask app into a web application*
-* **requirements.txt**
-    * *A Heroku requirements file to turn the Flask app into a web application*
+* **Classify_Zebra_Images.ipynb**
+    * *A jupyter notebook that implements simple machine learning to identify images of zebras*
+* **zebra_urls.txt**
+    * *A list of urls of pictures of zebras from Google Image Search*
+* **download_images.py**
+    * *Code to download images from a list of urls*
+* **get_random_images.py**
+    * *Code to randomly select pictures from the [UKBench Dataset](https://archive.org/details/ukbench)*
+* **ZEBRA/**
+    * *A directory of ~400 pictures that contain zebras*
+* **NOZEBRA/**
+    * *A directory of ~400 pictures that don't contain zebras*
 
 ### Dependencies
 
