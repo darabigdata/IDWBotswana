@@ -7,8 +7,8 @@ Machine Learning can be used to provide awesome applications and services. Examp
 
 ### What's in the repo?
 
-* **Simple_Movie_Recommender.ipynb**
-    * *A jupyter notebook that implements simple machine learn to recommend movies based on a model trained on an input database*
+* **Music_Classifier.ipynb**
+    * *A jupyter notebook that implements simple machine learning to classify music*
 * **tmdb_5000_movies.csv**
     * *An input database of 5000 movies [from Kaggle](https://www.kaggle.com/tmdb/tmdb-movie-metadata)*
 * **tmdb_movies_clean.csv**
@@ -38,7 +38,7 @@ Machine Learning can be used to provide awesome applications and services. Examp
 
 ------
 
-## Simple Movie Recommender Tutorial
+## Simple Music Classification
 
 This is a simple tutorial, using the example provided in this repository on converting a Machine Learning (ML) project into a web application using Flask and deploying to the web on Heroku. For more extensive tutorials on Flask and Heroku please see:
 
@@ -50,3 +50,8 @@ This is a simple tutorial, using the example provided in this repository on conv
 This may seem as a silly step, but it is the most important. Having an idea on what you want to build will help you understand what 
 you will need from the Machine Learning part of the project. In this tutorial we'll make a simple web application to provide 
 movie recommendations, based on a movie the user liked. The input will be a name of the movie and the output will be recommendations based on that movie. For this to work we'll need: (1) a database of movies; and (2) a machine learning model for the recommendations. 
+
+
+-----
+
+This tutorial is based on a [JBCA hack challenge](https://github.com/informationcake/music-machine-learning) and the work by [Alex Clarke](https://informationcake.github.io/music-machine-learning/).
