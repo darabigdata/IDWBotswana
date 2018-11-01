@@ -32,7 +32,58 @@ Music recommendation systems are all over the internet, from Spotify to iTunes. 
 
 ## Simple Music Classification
 
-### Step 1. Extract machine learning features from music
+### Step 1. Load in some music
+
+Extracting features from audio can be a time consuming process. If you want to speed things up you can parallelize your python! First you probably want to find out how many cores you can parallelize over:
+
+```python
+num_workers = multiprocessing.cpu_count() 
+print('you have {0} cores available to do your bidding...'.format(num_workers))
+```
+
+You'll need a function to load the music in:
+
+```python
+def load_music(songname1,songpath1):
+    try:
+        print('loading the song: {0} ......... located here: {1} '.format(songname1, songpath1))
+        songdata1, sr1 = lb.load(songpath1) # librosa library used to grab song data and sample rate
+        print ('done........ '+songname1)
+        return [songname1,songdata1,sr1]
+    except: # the song could be corrupt or you could be trying to load something which isn't a song
+        print('..............................FAILED...............................')
+        print(songpath1)
+        print('...................................................................')
+        return
+```
+
+Then you can specify the directory where the audio files are and make a list of their titles:
+
+```python
+path='BandOfSkulls'
+
+for song in os.listdir(path):
+    print (song)
+    songname_tmp.append(song)
+    songpath_tmp.append(path+'/'+song)
+```
+
+...before loading them in. You can do this either in **parallel**:
+
+```python
+with multiprocessing.Pool(processes=num_workers) as pool:
+    songdb=pool.starmap(load_music,zip(songname,songpath))
+    pool.close()
+    pool.join()
+```
+or as a normal **serial** operation:
+
+```python
+# Serial version:
+songdb=[]
+for i in range(0, len(songname)):
+    songdb.append(load_music(songname[i], songpath[i]))
+```
 
 ### Step 2. Prepare your data
 
