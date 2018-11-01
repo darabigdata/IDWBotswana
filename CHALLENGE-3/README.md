@@ -86,6 +86,11 @@ for i in range(0, len(songname)):
     songdb.append(load_music(songname[i], songpath[i]))
 ```
 
+Finally just check that they all loaded!
+
+```python
+print ('>>> loaded {0} songs into memory'.format(len(songdb)))
+```
 
 ### Step 2. Extract features from your data
 
