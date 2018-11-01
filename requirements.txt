@@ -51,6 +51,7 @@ networkx==2.2
 notebook==5.7.0
 numba==0.40.1
 numpy==1.15.3
+opencv-python==3.4.3.18
 packaging==18.0
 pandocfilters==1.4.2
 parso==0.3.1
