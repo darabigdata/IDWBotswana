@@ -64,10 +64,11 @@ path='BandOfSkulls'
 
 for song in os.listdir(path):
     print (song)
-    songname_tmp.append(song)
-    songpath_tmp.append(path+'/'+song)
+    songname.append(song)
+    songpath.append(path+'/'+song)
 ```
 
+<div class="boxBorder">
 ...before loading them in. You can do this either in **parallel**:
 
 ```python
@@ -84,8 +85,9 @@ songdb=[]
 for i in range(0, len(songname)):
     songdb.append(load_music(songname[i], songpath[i]))
 ```
+</div>
 
-### Step 2. Prepare your data
+### Step 2. Extract features from your data
 
 ### Step 3. Run some machine learning
 
