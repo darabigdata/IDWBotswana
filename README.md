@@ -23,15 +23,15 @@ The DARA Big Data hack challenges will be run in Python3 using the [IDIA Cloud](
 
 ## Challenge 1: Build a machine learning recommendation engine web application
 
-Machine Learning can be used to provide awesome applications and services. Examples are recommender systems on Netflix, Amazon and even Google reverse Image search. However, creating an application isn't limited to big tech firms. In this challenge you will build a web application of your choice.
+Machine Learning can be used to provide awesome applications and services. Examples are recommender systems on Netflix, Amazon and even Google reverse Image search. However, creating an application isn't limited to big tech firms. In this challenge you will build a web application of your choice and we've put together [a tutorial](IDWBotswana/CHALLENGE-1) to help you get started, which shows you how to build a movie recommender based on a simple machine learning approach.
 
 ## Challenge 2: Build a machine learning image classifier using web-scraped data
 
-In this challenge you will learn how to web scrape images from Google and use them to train/test an image-based Machine Learning classifier. The aim is to come up with a image classification problem (cats vs dogs, people vs trees, Trump vs an orange cheeto etc), build your own database for training the algorithm by web-scraping the images and then to use machine learning for the classification.
+An image paints a thousand words... but wuith so many images out there how do you know which one is which? In this challenge you will learn how to web-scrape images from Google and use them to train/test an image-based machine learning classifier. The aim is to come up with a image classification problem (cats vs. dogs, people vs. trees, Trump vs. an orange cheeto... etc), build your own database for training the algorithm by web-scraping the images, and then to use machine learning to classify the subjects of the images. Depending on how successful you are, you might want to extend the challenge and include some location, recognition or saliency analysis. To help you get started we've put together [a tutorial](IDWBotswana/CHALLENGE-2) that shows you how to web-scrape images and then how to perform a simple image based classification.
 
 ## Challenge 3: Build a machine learning music classification system
 
-This project is all about using python to extract features from audio waveforms, and to then run machine learning algorithms to cluster and quantify music.
+Music recommendation systems are all over the internet, from Spotify to iTunes. But how do they know what music you will like? For this challenge you build a machine learning application that classifies music using the content of the individual tracks. Your application could make recommendations for individuals, or it could suggest musical tracks that would be good in films, or it could automatically identify artists, or it could do something else! The choice is up to you. To help you get started we've put together [a tutorial](IDWBotswana/CHALLENGE-3) that shows you how to extract machine learning features from audio files and then use them with a variety of machine learning algorithms.
 
 -----
 
