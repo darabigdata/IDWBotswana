@@ -3,7 +3,7 @@
 
 # Challenge 3: Build a machine learning music classification system
 
-Machine Learning can be used to provide awesome applications and services. Examples are recommender systems on Netflix, Amazon and even Google reverse Image search. However, creating an application isn't limited to big tech firms. For this challenge you will build a web application of your choice. To help you get started we've provided a tutorial on how to build a machine learning movie recommendation application.
+Music recommendation systems are all over the internet, from Spotify to iTunes. But how do they know what music you will like? For this challenge you build a machine learning application that classifies music using the content of the individual tracks. Your application could make recommendations for individuals, or it could suggest musical tracks that would be good in films, or it could automatically identify artists, or it could do something else! The choice is up to you. 
 
 ### What's in the repo?
 
