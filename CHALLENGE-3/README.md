@@ -32,6 +32,8 @@ Music recommendation systems are all over the internet, from Spotify to iTunes. 
 
 ## Simple Music Classification
 
+We've provided dictionaries of features for a selection of different artists in the two folders [data_5band]() and [data_5and25band]() so if you just want to skip straight to the machine learning you can ignore Step 1 & Step 2 and go immediately to Step 3. However, if you want to extract features for your own favourite artists (using your own music library) we've also provided some example code to show you how. The code is set up to look for all the audio files (.mp3, .mp4, .m4a etc.) for a particular artist/band in the same directory, but you can alter that if you need to.
+
 ### Step 1. Load in some music
 
 Extracting features from audio can be a time consuming process. If you want to speed things up you can parallelize your python! First you probably want to find out how many cores you can parallelize over:
@@ -97,6 +99,8 @@ print ('>>> loaded {0} songs into memory'.format(len(songdb)))
 
 ### Step 2. Extract features from your data
 
+We'll start by separating out the name of each song, the feature data for that song and the sampling rate for the song.
+
 ```python
 for song in songdb: 
     song_name.append(song[0])
@@ -152,6 +156,46 @@ save_obj(data_dict_mean,savefile)
 
 
 ### Step 3. Run some machine learning
+
+```python
+def prepare_data(all_data_in):
+    
+    all_features=[]
+    all_artists=[]
+    
+    # Create lists of song names and features for each artist:
+    for artist in all_data_in: 
+        
+        # load in the feature dictionary for the artist:
+        data=load_obj(artist.replace('.pkl',''))
+        print('loading {0}'.format(artist))
+        
+        songname=[] # will be a list of song names
+        songfeat=[] # will be a list of dictionaries containing the feature data
+        artists=[]  # will be a list of artists
+        
+        # extract out the features, song name and artist into separate lists:
+        for song in data: 
+            songfeat.append(data[song]) 
+            songname.append(song)
+                    artists.append(artist.replace('_data.pkl','').replace('all_','').replace(path,'').replace('_data_testsplit.pkl','').replace('_data_trainsplit.pkl',''))
+
+        # make a list of the feature names:
+        feature_names=list(songfeat[0].keys()) 
+        
+        # make a list all the feature values for this artist:
+        features=[] 
+        for i in range(len(songfeat)):
+            features.append(list(songfeat[i].values())) 
+            
+        # append the feature values for this artist into a master list:
+        all_features+=features
+        
+        # append the artist name for this artist into a master list:
+        all_artists+=artists
+        
+    return all_features, all_artists, feature_names
+```
 
 
 -----
