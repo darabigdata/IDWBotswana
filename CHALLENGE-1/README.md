@@ -17,6 +17,8 @@ Machine Learning can be used to provide awesome applications and services. Examp
     * *An output pickle file of the machine learning model*
 * **app.py**
     * *Code to make a simple Flask application*
+* **Flask_App.ipynb**
+    * *A jupyter notebook that contains code (the same as app.py) to make a simple Flask application*
 * **templates**
     * *A directory of Flask HTML templates*
 * **Procfile**
@@ -139,9 +141,17 @@ The above html file has three important features:
 The overall aim of this web app is that user will search for the movie in a form provided (a query that is sent to 
 "/similarByName" via  "similar.html") and for each item in the list there will be an associated recommend button (that sends a query to another function /similarByContent also by  "similar.html"). The "/similarByContent" function is where the pickle file is used. 
 
-To complete my app.py, I added a random movie generator, and an about page.
+To complete this application, we added a random movie generator and an about page.
 
-**Note: while building your Flask app, you can test it by exectuting it via python. It will make a webpage at http://127.0.0.1:5000/**
+You can either run the app.py script directly:
+
+```bash
+> python app.py
+```
+
+or you can follow the steps in the [Flask_App jupyter notebook]((https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-1/Simple_Movie_Recommender.ipynb).
+
+**Note:** Before you link it to Heroku you can still see your app in the web-browser. Flask will make a webpage at http://127.0.0.1:5000/
 
 ### Step 5. Deploy to Heroku
 
