@@ -85,5 +85,6 @@ def random():
 
 
 if __name__ == '__main__':
-	app.run()
-
+    # you might need to change your port number
+    # allowed values are 5000 - 5010
+	app.run(host='0.0.0.0',port=5000)
