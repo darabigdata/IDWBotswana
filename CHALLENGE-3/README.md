@@ -11,6 +11,8 @@ Music recommendation systems are all over the internet, from Spotify to iTunes. 
     * *A jupyter notebook that uses the librosa library to extract machine learning features from audio files*
 * **Music_Classifier.ipynb**
     * *A jupyter notebook that implements simple machine learning to classify music*
+* **Plot_Similiarity.ipynb**
+    * *A jupyter notebook that plots the similarity between different target classes*
 * **data_5band**
     * *A folder containing files with machine learning features for different artists/bands*
 * **data_5and25band**
