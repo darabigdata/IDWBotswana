@@ -270,6 +270,7 @@ This nice [slide by Nikos Nikolaou](https://github.com/as595/4IR-ClassificationW
 
 <p align="center"><img width=80% src="https://github.com/darabigdata/IDWBotswana/blob/master/media/errors.png"></p>
 
+Or you can read about it online, for example [here](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) and [here](https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall).
 
 -----
 
