@@ -157,6 +157,8 @@ save_obj(data_dict_mean,savefile)
 
 ### Step 3. Run some machine learning
 
+We'll need a function to extract the information from the dictionaries of features that we saved to disk. Something like this should work:
+
 ```python
 def prepare_data(all_data_in):
     
@@ -178,7 +180,7 @@ def prepare_data(all_data_in):
         for song in data: 
             songfeat.append(data[song]) 
             songname.append(song)
-                    artists.append(artist.replace('_data.pkl','').replace('all_','').replace(path,'').replace('_data_testsplit.pkl','').replace('_data_trainsplit.pkl',''))
+                   artists.append(artist.replace('_data.pkl','').replace('all_','').replace(path,'').replace('_data_testsplit.pkl','').replace('_data_trainsplit.pkl',''))
 
         # make a list of the feature names:
         feature_names=list(songfeat[0].keys()) 
@@ -195,6 +197,69 @@ def prepare_data(all_data_in):
         all_artists+=artists
         
     return all_features, all_artists, feature_names
+```
+
+We then need to find the data to run it on. So to start with we should tell the program where we put all of the dictionary files:
+
+```python
+path='./data_5band/'
+```
+
+Then we should make a list of them all:
+
+```python
+all_data=glob.glob(path+'/*_data.pkl')
+```
+
+Then we use the function we defined above to read in all the data:
+
+```python
+all_features, all_artists, feature_names = prepare_data(all_data) 
+```
+
+Whatever form of machine learning we end up using we're going to need to split our input data into:
+
+* training data (to train our machine learning algorithm)
+* test data (to test how well the training worked)
+
+Let's start by taking 90% of the data for training:
+
+```python
+train_percent=0.9
+test_percent=0.1
+```
+
+We can then use the [scikit-learn function train_test_split](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) to randomly divide the full dataset for us:
+
+```python
+features_train, features_test, artists_train, artists_test = train_test_split(all_features, all_artists, train_size=train_percent, test_size=test_percent, random_state=0, stratify=all_artists)
+```
+
+There are two examples of different machine learning approaches in the [MusicClassification.ipynb jupyter notebook](), here we'll just look at a simple random forest classifier.
+
+First we need to build our forest:
+
+```python
+n_estimators=1000 # number of trees
+forest = RandomForestClassifier(n_estimators=n_estimators, random_state=2, class_weight='balanced')
+```
+
+Then we need to train the machine learning model:
+
+```python
+forest.fit(features_train, artists_train)
+```
+
+Now we can test it:
+
+```python
+artists_pred = forest.predict(features_test)
+```
+
+...and look at the performance metrics to see how well we did:
+
+```python
+print(classification_report(artists_test, artists_important_pred,target_names=names))
 ```
 
 
