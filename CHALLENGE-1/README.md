@@ -39,20 +39,17 @@ Machine Learning can be used to provide awesome applications and services. Examp
 
 ## Simple Movie Recommender Tutorial
 
-This is a simple tutorial, using the example provided in this repository on converting a Machine Learning (ML) project into a web application using Flask and deploying to the web on Heroku. For more extensive tutorials on Flask and Heroku please see:
-
-1. https://xcitech.github.io/tutorials/heroku_tutorial/
-2. https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+This is a simple tutorial that shows you how to convert a Machine Learning (ML) project - here a movie recommendation engine - into a web application using Flask and deploying to the web on Heroku. If you'd like more detail on either of these you can check out this [flask tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world) and/or this [heroku tutorial](https://xcitech.github.io/tutorials/heroku_tutorial/).
 
 ### Step 1. Understand what you want to create
 
-This may seem as a silly step, but it is the most important. Having an idea on what you want to build will help you understand what 
+This may seem as a silly step, but it is the most important. Having an idea of what you want to build will help you understand what 
 you will need from the Machine Learning part of the project. In this tutorial we'll make a simple web application to provide 
 movie recommendations, based on a movie the user liked. The input will be a name of the movie and the output will be recommendations based on that movie. For this to work we'll need: (1) a database of movies; and (2) a machine learning model for the recommendations. 
 
 ### Step 2. Build your model and save the important bits
 
-This is where you work on your ML project and optimise your models. In this example we'll make a simple movie recommender using the [TMDB database from Kaggle](https://www.kaggle.com/tmdb/tmdb-movie-metadata), which is detailed in the [jupyter notebook](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-1/Simple_Movie_Recommender.ipynb) in this repository.
+This is where you work on your ML project and optimise your models. In this example we'll make a simple movie recommender using the [TMDB database from Kaggle](https://www.kaggle.com/tmdb/tmdb-movie-metadata). The method we'll use is implemented in the [Simple_Movie_Recommender jupyter notebook](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-1/Simple_Movie_Recommender.ipynb) in this repository.
 
 In most cases, you will not want to have the web application running the ML training and data pre-processing every time a user opens the  application (although in some cases you may, if the application uses data from the user). Doing the data pre-processing and ML heavy lifting off-line and exporting the model will make your application more efficient. The [example notebook](https://github.com/darabigdata/IDWBotswana/blob/master/CHALLENGE-1/Simple_Movie_Recommender.ipynb) exports two datasets:
 
@@ -81,7 +78,7 @@ with open('movieindices.pkl', 'wb') as fid:
 
 ### Step 3. Create a virtual environment
 
-Before starting with Flask to build the web application, create and start a virtual environment (this is important for pushing the app to Heroku later):
+Before starting with Flask to build the web application, it's sensible to create and start a virtual environment (this will make things simpler when you push the app to Heroku later):
 
 ```bash
 > virtualenv -p python3 env_flask
