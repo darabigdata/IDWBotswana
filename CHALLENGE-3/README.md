@@ -266,6 +266,10 @@ artists_pred = forest.predict(features_test)
 print(classification_report(artists_test, artists_important_pred,target_names=names))
 ```
 
+This nice [slide by Nikos Nikolaou](https://github.com/as595/4IR-ClassificationWorkshop/tree/master/NIKOS_NIKOLAOU) summarises some of the standard metrics for assessing how well machine learning algorithms perform.
+
+<p align="center"><img width=80% src="https://github.com/darabigdata/IDWBotswana/blob/master/media/errors.png"></p>
+
 
 -----
 
