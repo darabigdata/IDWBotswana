@@ -180,7 +180,7 @@ def prepare_data(all_data_in):
         for song in data: 
             songfeat.append(data[song]) 
             songname.append(song)
-                   artists.append(artist.replace('_data.pkl','').replace('all_','').replace(path,'').replace('_data_testsplit.pkl','').replace('_data_trainsplit.pkl',''))
+            artists.append(artist.replace('_data.pkl','').replace('all_','').replace(path,'').replace('_data_testsplit.pkl','').replace('_data_trainsplit.pkl',''))
 
         # make a list of the feature names:
         feature_names=list(songfeat[0].keys()) 
