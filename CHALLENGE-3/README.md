@@ -32,6 +32,8 @@ Music recommendation systems are all over the internet, from Spotify to iTunes. 
 
 ## Simple Music Classification
 
+There's are lots of ways to classify music: genre classification (rock, pop, classical, etc.), artist classification (Avril Lavigne, Metallica, Taylor Swift etc.). In this example we're going to look at artist classification. 
+
 We've provided dictionaries of features for a selection of different artists in the two folders [data_5band]() and [data_5and25band]() so if you just want to skip straight to the machine learning you can ignore Step 1 & Step 2 and go immediately to Step 3. However, if you want to extract features for your own favourite artists (using your own music library) we've also provided some example code to show you how. The code is set up to look for all the audio files (.mp3, .mp4, .m4a etc.) for a particular artist/band in the same directory, but you can alter that if you need to.
 
 ### Step 1. Load in some music
@@ -235,7 +237,7 @@ We can then use the [scikit-learn function train_test_split](http://scikit-learn
 features_train, features_test, artists_train, artists_test = train_test_split(all_features, all_artists, train_size=train_percent, test_size=test_percent, random_state=0, stratify=all_artists)
 ```
 
-There are two examples of different machine learning approaches in the [MusicClassification.ipynb jupyter notebook](), here we'll just look at a simple random forest classifier.
+There are two examples of different machine learning approaches in the [MusicClassification.ipynb jupyter notebook](), here we'll just look at a simple [random forest classifier](https://en.wikipedia.org/wiki/Random_forest).
 
 First we need to build our forest:
 
