@@ -35,8 +35,8 @@ print(sys.path)
 
 Before you can run python scripts on the command line in the terminal you will need to specify the PYTHONPATH environment variable. You can do this by using the following lines, replacing USERNAME with your own userid.
 
-```python
-export PYTHONPATH="/opt/workshop/lib/python3.6/site-packages/:/home/USERNAME/.local/lib/python3.6/site-packages/“
+```bash
+export PYTHONPATH="/opt/workshop/lib/python3.6/site-packages/:/home/USERNAME/.local/lib/python3.6/site-packages/"
 ```
 
 ### ...upload something to the IDIA cloud?
