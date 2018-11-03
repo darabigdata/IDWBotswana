@@ -45,6 +45,10 @@ Either grab it from github or use the upload button on the top left of the user 
 
 ### ...fix my librosa dependencies?
 
+VMs have been updated - this work around is no longer needed!
+
+~~In your home directory in the terminal type:~~
+
 ```bash
 cd
 mkdir ffmpeg
@@ -54,10 +58,10 @@ tar -xvf ffmpeg-git-20181101-32bit-static.tar.xz
 export PATH="$PATH:/home/USERNAME/ffmpeg/ffmpeg-git-20181101-32bit-static"
 ```
 
-remember to replace USERNAME with your own user name!
+~~remember to replace USERNAME with your own user name!~~
 
-You can test it out by running the file [test_librosa.py](https://github.com/darabigdata/IDWBotswana/blob/master/IDIA/test_librosa.py) in the terminal:
+~~You can test it out by running the file [test_librosa.py](https://github.com/darabigdata/IDWBotswana/blob/master/IDIA/test_librosa.py) in the terminal:~~
 
-```bash
+~~```bash
 > python test_librosa.py
-```
+```~~
