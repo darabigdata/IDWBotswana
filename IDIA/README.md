@@ -62,6 +62,6 @@ export PATH="$PATH:/home/USERNAME/ffmpeg/ffmpeg-git-20181101-32bit-static"
 
 ~~You can test it out by running the file [test_librosa.py](https://github.com/darabigdata/IDWBotswana/blob/master/IDIA/test_librosa.py) in the terminal:~~
 
-~~```bash
+```bash
 > python test_librosa.py
-```~~
+```
