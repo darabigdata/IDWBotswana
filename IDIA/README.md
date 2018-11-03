@@ -42,3 +42,14 @@ export PYTHONPATH="/opt/workshop/lib/python3.6/site-packages/:/home/USERNAME/.lo
 ### ...upload something to the IDIA cloud?
 
 Either grab it from github or use the upload button on the top left of the user interface <img src="https://github.com/darabigdata/IDWBotswana/blob/master/media/upload.png" width=5%>
+
+### ...fix my librosa dependencies?
+
+```bash
+cd
+mkdir ffmpeg
+cd ffmpeg
+wget https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-32bit-static.tar.xz
+tar -xvf ffmpeg-git-32bit-static.tar.xz
+export PATH="$PATH:/home/USERNAME/ffmpeg/ffmpeg-git-32bit-static"
+```
