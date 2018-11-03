@@ -56,7 +56,7 @@ export PATH="$PATH:/home/USERNAME/ffmpeg/ffmpeg-git-32bit-static"
 
 remember to replace USERNAME with your own user name!
 
-You can test it out by running the file [test_librosa.py]() in the terminal:
+You can test it out by running the file [test_librosa.py](https://github.com/darabigdata/IDWBotswana/blob/master/IDIA/test_librosa.py) in the terminal:
 
 ```bash
 > python test_librosa.py
