@@ -53,3 +53,11 @@ wget https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-32bit-static.tar.xz
 tar -xvf ffmpeg-git-32bit-static.tar.xz
 export PATH="$PATH:/home/USERNAME/ffmpeg/ffmpeg-git-32bit-static"
 ```
+
+remember to replace USERNAME with your own user name!
+
+You can test it out by running the file [test_librosa.py]() in the terminal:
+
+```bash
+> python test_librosa.py
+```
