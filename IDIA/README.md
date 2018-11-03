@@ -50,7 +50,7 @@ cd
 mkdir ffmpeg
 cd ffmpeg
 wget https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-32bit-static.tar.xz
-tar -xvf ffmpeg-git-32bit-static.tar.xz
+tar -xvf ffmpeg-git-20181101-32bit-static.tar.xz
 export PATH="$PATH:/home/USERNAME/ffmpeg/ffmpeg-git-32bit-static"
 ```
 
