@@ -68,4 +68,29 @@ export PATH="$PATH:/home/USERNAME/ffmpeg/ffmpeg-git-20181101-32bit-static"
 
 ### ...write my presentation slides?
 
-https://docs.google.com/presentation/d/1XlG8JmJf40U27c3R6FiS7a7bDf574LmcsLggvcwzgjw/edit?usp=sharing
+[link removed]()
+
+
+### ...copy all my work off the IDIA cloud to github?
+
+In your home directory on the cloud us the following sequence of commands:
+
+```bash
+echo "# My IDWBotswana hackathon" >> README.md
+git init
+git add README.md
+git add *
+```
+
+Then use the following sequence of commands, but remember to substitute:
+
+* m2@myemail.com = the email address you used to reigster your github account
+* mygithubname = your own github user name
+
+```bash
+git config --global user.email "me@myemail.com"
+git config --global user.name "mygithubname"
+git commit -m "first commit"
+git remote add origin https://github.com/mygithubname/idwdarahack.git
+git push -u origin master
+```
