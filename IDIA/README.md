@@ -66,6 +66,6 @@ export PATH="$PATH:/home/USERNAME/ffmpeg/ffmpeg-git-20181101-32bit-static"
 > python test_librosa.py
 ```
 
-### ...write my presentations slides?
+### ...write my presentation slides?
 
 https://docs.google.com/presentation/d/1XlG8JmJf40U27c3R6FiS7a7bDf574LmcsLggvcwzgjw/edit?usp=sharing
