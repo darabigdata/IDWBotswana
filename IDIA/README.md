@@ -79,7 +79,7 @@ Once you've registered look for a button that says "New Repository".
 
 Click the button and fill in the following form like this:
 
-<p align="center"><img width=30% src="https://github.com/darabigdata/IDWBotswana/blob/master/media/github1.png"></p>
+<p align="center"><img width=80% src="https://github.com/darabigdata/IDWBotswana/blob/master/media/github1.png"></p>
 
 The "Owner" field should contain your own github username.
 
@@ -121,4 +121,10 @@ git push -u origin master
 
 You will now be asked for your github user name and password.
 
+And that's it - all your code should now be on github.
 
+Note: If you accidentally get the url wrong in the "git remote ..." command, you can reset it by typing:
+
+```bash
+git remote set-url origin https://github.com/mygithubname/idwdarahack.git
+```
