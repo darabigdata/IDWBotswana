@@ -73,9 +73,33 @@ export PATH="$PATH:/home/USERNAME/ffmpeg/ffmpeg-git-20181101-32bit-static"
 
 ### ...copy all my work off the IDIA cloud to github?
 
-In your home directory on the cloud us the following sequence of commands:
+If you do not already have a github account you will need to [create one](https://github.com) (this is free). Make a note of the email address you used to register, your own github username and your github password. 
+
+Once you've registered look for a button that says "New Repository". 
+
+Click the button and fill in the following form like this:
+
+<p align="center"><img width=30% src="https://github.com/darabigdata/IDWBotswana/blob/master/media/github1.png"></p>
+
+The "Owner" field should contain your own github username.
+
+**Click "Create Repository"**
+
+Your github repo has now been created. Click on "idwdarahack" at the top to see the empty repository.
+
+Now go to the IDIA cloud. The following instructions assume that you are in your home directory.
+
+If you cloned the IDWBotswana github repo onto the cloud you should first do:
 
 ```bash
+cd IDWBotswana
+rm -rf .git
+```
+
+Then change directory back to your home directory and initialise this directory for github using the following commands:
+
+```bash
+cd
 echo "# My IDWBotswana hackathon" >> README.md
 git init
 git add README.md
@@ -84,8 +108,8 @@ git add *
 
 Then use the following sequence of commands, but remember to substitute:
 
-* m2@myemail.com = the email address you used to reigster your github account
-* mygithubname = your own github user name
+* m2@myemail.com - the email address you used to register your github account
+* mygithubname - your own github user name (note this is used in the git config commandline **and** the git remote commandline!)
 
 ```bash
 git config --global user.email "me@myemail.com"
@@ -94,3 +118,7 @@ git commit -m "first commit"
 git remote add origin https://github.com/mygithubname/idwdarahack.git
 git push -u origin master
 ```
+
+You will now be asked for your github user name and password.
+
+
