@@ -43,28 +43,6 @@ export PYTHONPATH="/opt/workshop/lib/python3.6/site-packages/:/home/USERNAME/.lo
 
 Either grab it from github or use the upload button on the top left of the user interface <img src="https://github.com/darabigdata/IDWBotswana/blob/master/media/upload.png" width=5%>
 
-### ...fix my librosa dependencies?
-
-VMs have been updated - this work around is no longer needed!
-
-~~In your home directory in the terminal type:~~
-
-```bash
-cd
-mkdir ffmpeg
-cd ffmpeg
-wget https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-32bit-static.tar.xz
-tar -xvf ffmpeg-git-20181101-32bit-static.tar.xz
-export PATH="$PATH:/home/USERNAME/ffmpeg/ffmpeg-git-20181101-32bit-static"
-```
-
-~~remember to replace USERNAME with your own user name!~~
-
-~~You can test it out by running the file [test_librosa.py](https://github.com/darabigdata/IDWBotswana/blob/master/IDIA/test_librosa.py) in the terminal:~~
-
-```bash
-> python test_librosa.py
-```
 
 ### ...write my presentation slides?
 
@@ -123,7 +101,7 @@ You will now be asked for your github user name and password.
 
 And that's it - all your code should now be on github.
 
-Note: If you accidentally get the url wrong in the "git remote ..." command, you can reset it by typing:
+*Note: If you accidentally get the url wrong in the "git remote ..." command, you can reset it by typing:*
 
 ```bash
 git remote set-url origin https://github.com/mygithubname/idwdarahack.git
