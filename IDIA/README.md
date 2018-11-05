@@ -86,7 +86,7 @@ git add *
 
 Then use the following sequence of commands, but remember to substitute:
 
-* m2@myemail.com - the email address you used to register your github account
+* me@myemail.com - the email address you used to register your github account
 * mygithubname - your own github user name (note this is used in the git config commandline **and** the git remote commandline!)
 
 ```bash
