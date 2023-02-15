@@ -10,4 +10,4 @@ pandas==0.21.0
 python-dateutil==2.6.1
 pytz==2017.3
 six==1.11.0
-Werkzeug==0.13
+Werkzeug==2.2.3
